@@ -99,12 +99,8 @@ def fitLine(x, y, alpha=0.05, newx=[], plotFlag=1):
     
 if __name__ == '__main__':
         # example data
-        x = np.array([15.3, 10.8, 8.1, 19.5, 7.2, 5.3, 9.3, 11.1, 7.5, 12.2,
-                      6.7, 5.2, 19.0, 15.1, 6.7, 8.6, 4.2, 10.3, 12.5, 16.1, 
-                      13.3, 4.9, 8.8, 9.5])
-        y = np.array([1.76, 1.34, 1.27, 1.47, 1.27, 1.49, 1.31, 1.09, 1.18, 
-                      1.22, 1.25, 1.19, 1.95, 1.28, 1.52, np.nan, 1.12, 1.37, 
-                      1.19, 1.05, 1.32, 1.03, 1.12, 1.70])
+        x = np.array([1, 3, 4, 5, 2, 6, 8, 2, 4, 3])
+        y = np.array([4, 5, 3, 2, 5, 2, 6, 4, 8, 5])
                       
         goodIndex = np.invert(np.logical_or(np.isnan(x), np.isnan(y)))
         (a,b,(ci_a, ci_b), ri,newy) = fitLine(x[goodIndex],y[goodIndex], alpha=0.01,newx=np.array([1,4.5]))        
