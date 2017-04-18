@@ -76,6 +76,7 @@ def angle3():
         angle3 = angle3
     else:
         angle3 = "Error"
+    statement = "Angle 3 is %s"%(angle3)
     
 class AAAPage(tk.Frame):
     def __init__(self, parent, controller):
